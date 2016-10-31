@@ -23,14 +23,4 @@ public class Loan
     {
         return (((loan_money*(percentage / 100))*amount_of_years)+loan_money) / amount_of_years;
     }
-
-    public int getAmountOfYears()
-    {
-        return amount_of_years;
-    }
-
-    public double getPercentage()
-    {
-        return percentage;
-    }
 }

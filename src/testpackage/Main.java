@@ -34,6 +34,8 @@ public class Main
                 amount_of_years = Integer.parseInt(reader.readLine());
                 System.out.print("Write down %: ");
                 percentage = Integer.parseInt(reader.readLine());
+                if (percentage > 100)
+                    System.out.println("Loan percentage can't be greater than 100!");
                 Loan l = new Loan(loan_money, amount_of_years, percentage);
                 System.out.println("Your year payment is: " + (float)l.getYearPayment());
                 System.out.println("Your total payment is: " + l.getTotalPayment());
@@ -54,6 +56,9 @@ public class Main
 
                 System.out.print("Write down state %: ");
                 statePercentage = Integer.parseInt(reader.readLine());
+
+                if (statePercentage > 100)
+                    System.out.println("State percentage can't be greater than 100!");
 
                 TaxesCalculator t = new TaxesCalculator(yourMoney, statePercentage);
 
